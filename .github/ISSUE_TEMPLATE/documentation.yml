@@ -1,0 +1,18 @@
+name: "📚 Documentation"
+description: "Demande ou correction de documentation"
+labels: ["documentation"]
+body:
+  - type: textarea
+    id: section
+    attributes:
+      label: "Section concernée"
+      placeholder: "ex: API, Plugins, Installation…"
+    validations:
+      required: true
+
+  - type: textarea
+    id: change
+    attributes:
+      label: "Modification souhaitée"
+    validations:
+      required: true
