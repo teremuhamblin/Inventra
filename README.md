@@ -12,6 +12,43 @@ Inventra est un système de gestion d’inventaire open‑source basé sur Pytho
 - Interface d’administration Django
 - Système de plugins extensible
 
+### Structure du projet
+```text
+Inventra/
+├── backend/
+│   ├── inventra/
+│   │   ├── __init__.py
+│   │   ├── settings.py
+│   │   ├── urls.py
+│   │   ├── wsgi.py
+│   ├── inventory/
+│   │   ├── __init__.py
+│   │   ├── models.py
+│   │   ├── views.py
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   ├── serializers.py
+│   │   │   ├── endpoints.py
+│   ├── plugins/
+│   │   ├── __init__.py
+│   │   ├── base.py
+│   │   ├── registry.py
+│   ├── manage.py
+├── docs/
+│   ├── README_BACKEND.md
+│   ├── ROADMAP.md
+│   ├── STRUCTURE.md
+├── tests/
+│   ├── __init__.py
+│   ├── test_inventory.py
+├── docker/
+│   ├── Dockerfile
+│   ├── docker-compose.yml
+├── .env.example
+├── README.md
+└── LICENSE
+```
+
 ### Installation rapide
 - **API** disponible sur ***/api/,***
 - **admin** sur ***/admin/.***
