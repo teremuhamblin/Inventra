@@ -1,0 +1,28 @@
+name: "🛡️ Security Issue"
+description: "Signaler une vulnérabilité ou un comportement suspect"
+labels: ["security"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Explique la vulnérabilité ou le comportement suspect."
+    validations:
+      required: true
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: "Impact potentiel"
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: "Étapes pour reproduire"
+
+  - type: textarea
+    id: mitigation
+    attributes:
+      label: "Mitigation proposée"
