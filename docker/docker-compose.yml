@@ -1,0 +1,10 @@
+version: "3.9"
+
+services:
+  inventra-backend:
+    build: .
+    ports:
+      - "8000:8000"
+    environment:
+      INVENTRA_SECRET_KEY: "CHANGE_ME"
+      INVENTRA_DEBUG: "True"
