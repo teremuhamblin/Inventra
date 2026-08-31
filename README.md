@@ -20,6 +20,8 @@ Inventra est un système de gestion d’inventaire open‑source.
 ### Structure du projet
 ```text
 Inventra/
+├── .github/
+│   ├── workflows/
 ├── backend/
 │   ├── inventra/
 │   │   ├── __init__.py
