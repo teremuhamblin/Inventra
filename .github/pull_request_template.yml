@@ -1,0 +1,42 @@
+name: "🔀 Pull Request"
+description: "Template de Pull Request pour Inventra"
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description"
+      description: "Explique les modifications apportées."
+    validations:
+      required: true
+
+  - type: textarea
+    id: changes
+    attributes:
+      label: "Changements inclus"
+      description: "- …\n- …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: tests
+    attributes:
+      label: "Tests réalisés"
+      description: "- Tests manuels\n- Tests automatiques\n- Vérification API"
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: "Fichiers modifiés"
+
+  - type: input
+    id: issue
+    attributes:
+      label: "Issue liée"
+      placeholder: "ex: Closes #42"
+
+  - type: textarea
+    id: notes
+    attributes:
+      label: "Notes supplémentaires"
