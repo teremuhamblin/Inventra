@@ -1,0 +1,38 @@
+name: "🐞 Bug Report"
+description: "Signaler un bug dans Inventra"
+labels: ["bug"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: "Description du bug"
+      description: "Explique clairement le problème rencontré."
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: "Étapes pour reproduire"
+      description: "1. …\n2. …\n3. …"
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: "Comportement attendu"
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: "Logs / Captures"
+      description: "Ajoute des logs, erreurs ou captures d’écran."
+
+  - type: input
+    id: version
+    attributes:
+      label: "Version d’Inventra"
+      placeholder: "ex: v1.0.0"
