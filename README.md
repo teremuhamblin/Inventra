@@ -3,7 +3,12 @@
    - Python/Django, API REST, interface admin, système de plugins
 
 # Inventra
-Inventra est un système de gestion d’inventaire open‑source basé sur Python/Django.
+Inventra est un système de gestion d’inventaire open‑source.
+
+### Stack
+- Python 3
+- Django
+- Django REST Framework
 
 ### Fonctionnalités
 - Contrôle précis des stocks
