@@ -1,0 +1,36 @@
+name: "🚀 Feature Request"
+description: "Proposer une nouvelle fonctionnalité pour Inventra"
+labels: ["enhancement"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objectif"
+      description: "Décris la fonctionnalité souhaitée et son utilité."
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "Description détaillée"
+      description: "Explique comment la fonctionnalité doit fonctionner."
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: components
+    attributes:
+      label: "Composants concernés"
+      options:
+        - label: "Backend Django"
+        - label: "API REST"
+        - label: "Plugins"
+        - label: "Frontend"
+        - label: "Documentation"
+
+  - type: textarea
+    id: refs
+    attributes:
+      label: "Références"
+      description: "Liens, inspirations, projets similaires."
