@@ -63,3 +63,49 @@ python manage.py migrate
 python manage.py createsuperuser
 python manage.py runserver
 ```
+
+### Création de l'environnement
+```text
+#!/usr/bin/env bash
+set -e
+
+mkdir -p Inventra/backend/inventra
+mkdir -p Inventra/backend/inventory/api
+mkdir -p Inventra/backend/plugins
+mkdir -p Inventra/docs
+mkdir -p Inventra/tests
+mkdir -p Inventra/docker
+
+touch Inventra/backend/inventra/__init__.py
+touch Inventra/backend/inventra/settings.py
+touch Inventra/backend/inventra/urls.py
+touch Inventra/backend/inventra/wsgi.py
+
+touch Inventra/backend/inventory/__init__.py
+touch Inventra/backend/inventory/models.py
+touch Inventra/backend/inventory/views.py
+touch Inventra/backend/inventory/api/__init__.py
+touch Inventra/backend/inventory/api/serializers.py
+touch Inventra/backend/inventory/api/endpoints.py
+
+touch Inventra/backend/plugins/__init__.py
+touch Inventra/backend/plugins/base.py
+touch Inventra/backend/plugins/registry.py
+
+touch Inventra/backend/manage.py
+
+touch Inventra/docs/README_BACKEND.md
+touch Inventra/docs/ROADMAP.md
+touch Inventra/docs/STRUCTURE.md
+
+touch Inventra/tests/__init__.py
+touch Inventra/tests/test_inventory.py
+
+touch Inventra/docker/Dockerfile
+touch Inventra/docker/docker-compose.yml
+
+touch Inventra/.env.example
+touch Inventra/README.md
+touch Inventra/LICENSE
+```
+
