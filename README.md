@@ -1,6 +1,8 @@
 ###### README.md >> markdown 
 - Projet conceptuel Inventra :
-   - Python/Django, API REST, interface admin, système de plugins
+   - Python/Django,
+   - API REST,
+   - interface admin, système de plugins
 
 # Inventra
 Inventra est un système de gestion d’inventaire open‑source.
