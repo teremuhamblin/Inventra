@@ -1,0 +1,36 @@
+# ============================
+#   .editorconfig — .github
+# ============================
+
+root = false
+
+# Global GitHub configs
+[*.{yml,yaml}]
+indent_style = space
+indent_size = 2
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+# Markdown (issues, PR templates)
+[*.md]
+indent_style = space
+indent_size = 2
+trim_trailing_whitespace = false
+
+# JSON (configurations internes)
+[*.json]
+indent_style = space
+indent_size = 2
+
+# GitHub workflows
+[.github/workflows/*]
+indent_style = space
+indent_size = 2
+
+# Shell scripts internes
+[*.sh]
+indent_style = space
+indent_size = 4
+end_of_line = lf
