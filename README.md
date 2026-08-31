@@ -13,6 +13,8 @@ Inventra est un système de gestion d’inventaire open‑source basé sur Pytho
 - Système de plugins extensible
 
 ### Installation rapide
+- **API** disponible sur ***/api/,***
+- **admin** sur ***/admin/.***
 
 ```bash
 git clone https://github.com/<ton-user>/Inventra.git
