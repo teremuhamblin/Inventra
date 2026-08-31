@@ -1,0 +1,32 @@
+name: "📌 Task"
+description: "Créer une tâche technique ou organisationnelle"
+labels: ["task"]
+body:
+  - type: textarea
+    id: objective
+    attributes:
+      label: "Objectif"
+    validations:
+      required: true
+
+  - type: textarea
+    id: details
+    attributes:
+      label: "Détails techniques"
+      description: "Liste les éléments à réaliser."
+    validations:
+      required: true
+
+  - type: textarea
+    id: files
+    attributes:
+      label: "Fichiers / Modules concernés"
+
+  - type: checkboxes
+    id: acceptance
+    attributes:
+      label: "Critères d’acceptation"
+      options:
+        - label: "Fonctionne comme prévu"
+        - label: "Testé"
+        - label: "Documenté"
