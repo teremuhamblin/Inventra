@@ -1,0 +1,21 @@
+# ============================
+#   CODEOWNERS — Inventra
+# ============================
+
+# Major Hamblin — propriétaire du projet
+* @teremuhamblin 
+
+# Backend Django
+backend/ @teremuhamblin 
+
+# API REST
+backend/InvenTree/api/ @teremuhamblin 
+
+# Plugins
+backend/plugins/ @teremuhamblin 
+
+# Documentation
+docs/ @teremuhamblin 
+
+# GitHub workflows & configs
+.github/ @teremuhamblin 
