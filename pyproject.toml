@@ -1,0 +1,116 @@
+[project]
+name = "Inventra"
+version = "1.0.0"
+description = "Système de gestion d’inventaire avancé, basé sur Django, API REST et plugins."
+readme = "README.md"
+requires-python = ">=3.12"
+license = { file = "LICENSE" }
+
+authors = [
+    { name = "Major Hamblin", email = "inventra@dev.local" }
+]
+
+dependencies = [
+    "django>=4.2",
+    "djangorestframework>=3.14",
+    "django-filter>=23.5",
+    "psycopg[binary]>=3.1",
+    "python-dotenv>=1.0",
+    "drf-spectacular>=0.27",
+]
+
+[tool.ruff]
+exclude = [
+    ".git",
+    "__pycache__",
+    "tests",
+    "venv",
+    "env",
+    ".venv",
+    ".env",
+    "src/backend/plugins/*",
+]
+src = ["src/backend/InvenTree"]
+
+[tool.ruff.lint]
+select = [
+    "A","B","C","C4","D","F","I","N","SIM","PIE","PLE","PLW","RUF","UP","W",
+    "DOC402","DOC403"
+]
+ignore = [
+    "PLE1205","PLW2901","PLW0602","PLW0603","PLW0604",
+    "RUF015","RUF012","RUF052","SIM117","SIM102","SIM105",
+    "C901","N802","N806","N812","N999",
+    "RUF032","RUF045","UP045",
+    "B904","A002","B018"
+]
+
+[tool.ruff.lint.extend-per-file-ignores]
+"__init__.py" = ["D104"]
+
+[tool.ruff.lint.pydocstyle]
+convention = "google"
+ignore-var-parameters = true
+
+[tool.ruff.lint.isort]
+split-on-trailing-comma = false
+combine-as-imports = false
+section-order = [
+    "future",
+    "standard-library",
+    "django",
+    "third-party",
+    "first-party",
+    "local-folder",
+]
+
+[tool.ruff.format]
+quote-style = "single"
+indent-style = "space"
+skip-magic-trailing-comma = true
+line-ending = "auto"
+
+[tool.uv.pip]
+python-version = "3.12"
+no-strip-extras = true
+generate-hashes = true
+
+[tool.ty.environment]
+extra-paths = ["src/backend/InvenTree"]
+
+[tool.ty.rules]
+unresolved-attribute = "ignore"
+call-non-callable = "ignore"
+invalid-assignment = "ignore"
+invalid-method-override = "ignore"
+invalid-return-type = "ignore"
+invalid-argument-type = "ignore"
+no-matching-overload = "ignore"
+unused-ignore-comment = "error"
+
+[tool.coverage.run]
+source = ["src/backend/InvenTree", "InvenTree"]
+dynamic_context = "test_function"
+omit = ["*/test_migrations.py"]
+
+[tool.coverage.html]
+show_contexts = true
+
+[tool.djlint]
+ignore = "D018,H006,H008,H020,H021,H023,H025,H030,H031,T002"
+
+[tool.isort]
+src_paths = ["src/backend/InvenTree"]
+skip_glob = "*/migrations/*.py"
+known_django = "django"
+sections = ["FUTURE","STDLIB","DJANGO","THIRDPARTY","FIRSTPARTY","LOCALFOLDER"]
+
+[tool.codespell]
+ignore-words-list = ["assertIn","SME","intoto","fitH"]
+
+[tool.pytest]
+django_find_project = false
+pythonpath = ["src/backend/InvenTree"]
+DJANGO_SETTINGS_MODULE = "InvenTree.settings"
+python_files = ["test*.py"]
+timeout = "120"
