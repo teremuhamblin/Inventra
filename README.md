@@ -17,7 +17,7 @@ Inventra est un système de gestion d’inventaire open‑source.
 - Interface d’administration Django
 - Système de plugins extensible
 
-### Structure du projet
+### Structure originale du projet base 
 ```text
 Inventra/
 ├── .github/
